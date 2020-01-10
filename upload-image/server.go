@@ -17,10 +17,10 @@ func HandleRoot(w http.ResponseWriter, r *http.Request) {
 		<html>
 		<body>
 			<form method="post"enctype="multipart/form-data" action="/upload" name="upload">
-			<labe for="file">Choose img:</label>
-			<input type="file" name="image"/> <br/>
-			<input type="submit" name="submit" value="Upload"/>
-		</form>
+				<labe for="file">Choose img:</label>
+				<input type="file" name="image"/> <br/>
+				<input type="submit" name="submit" value="Upload"/>
+			</form>
 		</body>
 		</html>
 	`)
