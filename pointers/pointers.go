@@ -43,7 +43,9 @@ func doubleThisNumber(theNumber int) int {
 	return theNumber * 2
 }
 
-// doubleWithPointer receives a pointer and returns a pointer (that's why there are 2 asteriscs *)
+// doubleWithPointer receives a pointer and returns a pointer 
+// that's why there are 2 asteriscs *: (theNumberPointer *int) *int
+// we could omit the pointer returned but this is just an example given
 func doubleWithPointer(theNumberPointer *int) *int { 
 	*theNumberPointer *= 2 // remember that by using the * before the pointer we access the pointer's value
 	return theNumberPointer // we return the pointer here
