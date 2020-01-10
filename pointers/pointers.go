@@ -14,23 +14,23 @@ import (
 
 func main() {
 	var myAddress string = "White House 123"
-	var myAddressPointer *string // the * operator says that string is a pointer
+	var myAddressPointer *string // the * operator says that myAddressPointer is going to point to a string
 
 	myAddressPointer = &myAddress // the & get's the memory address of the string variable
 	
-	fmt.Println(myAddressPointer) // returns 0xc0000581e0 the address of myAddress string variable
+	fmt.Println(myAddressPointer) // returns 0xc0000581e0, the address of myAddress string variable
 
 	// OK so we got home... but how do we actually get inside ?? How do we get the value of the memory address our pointer points to
 	fmt.Println(*myAddressPointer) // using the * before the pointer says to go HEY! Get me this pointer's value pls
 
 	// OK we got home and we got inside :) Yay! 
 
-	// What use can we give pointers ? 
+	// What use can we give this ? 
 	// GO is a "pass-value" language that means when we pass a parameter we get a copy of it and modify the copy not the real var
 	// So let's say you want to double a number by calling a function:
 	num := 10 // := the shorthand way to create an integer and assign value
 	doubleThisNumber(num)
-	fmt.Println(num) // prints out 10 !! and we wanted 10 doubled :(
+	fmt.Println(num) // prints out 10 !! and we wanted 20 (10 doubled) :(
 	// Pointer to the rescue but we need to change our function to receive a pointer now (let's create a new function)
 	num2 := 50
 	// We pass the ADDRESS of num2 because doubleWithPointer expects a pointer
